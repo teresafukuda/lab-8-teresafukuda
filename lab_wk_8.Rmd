@@ -9,3 +9,22 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+
+#load the tidyverse and read in the salmon_imports data
+
+library(tidyverse)
+
+salmon <- read_csv("salmon_imports.csv")
+
+```
+ ####Exploratory scatterplot
+ 
+```{r}
+
+salmon_scatter <- ggplot(salmon, aes(x=year, y=salmon_fresh)) +
+  geom_point()
+salmon_scatter
+
+```
+ 
