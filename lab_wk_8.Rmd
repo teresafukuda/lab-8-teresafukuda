@@ -26,5 +26,8 @@ salmon_scatter <- ggplot(salmon, aes(x=year, y=salmon_fresh)) +
   geom_point()
 salmon_scatter
 
+# overall, this data has a very linear trend except for a weird deviation in about 2004 and 2012; generally it makes sense that the fresh salmon would increase linearly, probably only until a certain point where salmon stocks are limiting.
+
+
 ```
  
