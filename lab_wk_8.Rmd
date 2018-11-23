@@ -41,5 +41,6 @@ salmon_model
 
 # model linear formula: salmon imports (thousands) = -14982940 + 7550(year)
 
+
 ```
 
