@@ -64,7 +64,7 @@ summary(salmon_model)
 
 ```
 
-Looking at the summary of the model, with an r-squared value of 0.9478, almost 95% of the variation in the salmon imports can be predicted by the year. With a p value < 0.001, I can say that the year significantly predicts salmon imports. There is 5.22% of variation in the salmon imports that cannot be explained by the year. None of this implies any kind of causation! Just correlation. 
+Looking at the summary of the model, with an r-squared value of 0.9478, almost 95% of the variation in the salmon imports can be predicted by the year. With a p value < 0.001, I can say that the year significantly predicts salmon imports. There is 5.22% of variation in the salmon imports that cannot be explained by the year. None of this implies any kind of causation! Careful with wording here.
 
 #### Prepare a final graph. 
 
@@ -78,6 +78,26 @@ salmon_final_graph <- ggplot(salmon, aes(x=year, y=salmon_fresh)) +
   labs(x="Year", y= "U.S. Annual Fresh Salmon Imports \n(1,000 pounds)")
 
 salmon_final_graph
+
+```
+
+
+#### Making predictions using the model
+
+```{r}
+
+# create new dataframe with column "years" containing the ones that we want to predict
+new_years<-data.frame(year=c(2022,2024,2026,2028))
+
+# use this dataframe and the predict() function to find the new values for the model
+
+future_predict <- predict(salmon_model,newdata=new_years,interval= "confidence")
+future_predict
+
+#bind this data and "new_years" data for a useful table of data
+
+predictions <- data.frame(new_years, future_predict)
+predictions
 
 ```
 
