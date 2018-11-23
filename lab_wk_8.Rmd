@@ -44,3 +44,15 @@ salmon_model
 
 ```
 
+The linear model give an equation with an intercept of -14982940 and a slope of 7550. That means that every year, based on the data we have, the model predicts that the salmon imports will increase by 7550 thousand pounds. 
+
+
+####Model diagnostics
+```{r}
+plot(salmon_model)
+
+# The residuals appear to be normally distributed, based on the residual vs fitted plot that does not appear to have a patterns and the normal q-q that is very linear. 
+
+```
+
+
