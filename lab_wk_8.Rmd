@@ -67,3 +67,17 @@ summary(salmon_model)
 Looking at the summary of the model, with an r-squared value of 0.9478, almost 95% of the variation in the salmon imports can be predicted by the year. With a p value < 0.001, I can say that the year significantly predicts salmon imports. There is 5.22% of variation in the salmon imports that cannot be explained by the year. None of this implies any kind of causation! Just correlation. 
 
 #### Prepare a final graph. 
+
+```{r}
+
+salmon_final_graph <- ggplot(salmon, aes(x=year, y=salmon_fresh)) +
+  geom_point() +
+  geom_smooth(method=lm, se=TRUE, size=0.5, color = "gray20")+
+  theme_bw() +
+  scale_x_continuous(expand = c(0,0), limits = c(1990, 2017)) +
+  labs(x="Year", y= "U.S. Annual Fresh Salmon Imports \n(1,000 pounds)")
+
+salmon_final_graph
+
+```
+
