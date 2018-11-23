@@ -64,4 +64,6 @@ summary(salmon_model)
 
 ```
 
+Looking at the summary of the model, with an r-squared value of 0.9478, almost 95% of the variation in the salmon imports can be predicted by the year. With a p value < 0.001, I can say that the year significantly predicts salmon imports. There is 5.22% of variation in the salmon imports that cannot be explained by the year. None of this implies any kind of causation! Just correlation. 
 
+#### Prepare a final graph. 
