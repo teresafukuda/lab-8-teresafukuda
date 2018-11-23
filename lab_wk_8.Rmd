@@ -101,3 +101,13 @@ predictions
 
 ```
 
+#### Find Pearson's R (correlation)
+```{r}
+
+correlation <- cor.test(salmon$salmon_fresh, salmon$year)
+correlation
+
+# correlation value 0.97; means that there is a strong correlation between year and salmon imports
+```
+
+
